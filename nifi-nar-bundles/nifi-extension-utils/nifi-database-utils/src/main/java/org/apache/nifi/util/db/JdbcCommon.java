@@ -280,6 +280,7 @@ public class JdbcCommon {
                                 }
                             }
                             rec.put(i - 1, sb.toString());
+                            clob.free(); //This will eliminate GC overhead
                         } else {
                             rec.put(i - 1, null);
                         }
